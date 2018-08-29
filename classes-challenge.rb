@@ -26,7 +26,7 @@ class Dog
 
     def walks
         @walks += 1
-        puts "I have been on #{@walks} walks"
+        self
     end
 
     def speak
@@ -34,8 +34,15 @@ class Dog
         puts "I am #{@age.to_i} years old"
         puts "I live in #{@location}"
     end
+
+    def display_walks
+        @walks = @walks
+        puts "I have been on #{@walks} walks"
+    end
 end
 
 doggo = Dog.new("Ralph", 12, "Brisbane")   
 doggo.walks
 doggo.walks
+doggo.walks
+doggo.display_walks
